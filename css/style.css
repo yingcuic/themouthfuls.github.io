@@ -1,0 +1,490 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.75;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+/* Layout Container for Full Height */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  max-width: 90%;
+  margin: auto;
+}
+
+.content-box {
+  background-color: #ffffff; /* White background for clean content */
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto; /* Center the content */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Typography Styling */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: #1a1a1a; /* Dark grey for headings */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem; /* Main title */
+}
+
+h2 {
+  font-size: 2rem; /* Section titles */
+}
+
+h3 {
+  font-size: 1.5rem; /* Sub-section titles */
+}
+
+p {
+  margin-bottom: 20px;
+  color: #4a4a4a; /* Slightly lighter grey for body text */
+}
+
+/* Links (Subtle Styling for Legal Pages) */
+a {
+  color: #00c4ac; /* Accent color similar to Apple */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent; /* Transparent background */
+  border-bottom: 2px solid #00c4ac; /* Bottom border */
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 54px; /* Adjust size */
+  height: auto;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+/* Styling List Items */
+.nav-links li {
+  margin-left: 20px;
+  text-decoration: none; /* Remove underline */
+  border-bottom: none; /* Remove any potential borders */
+  box-shadow: none; /* Remove any shadow */
+  color: #44c4ac;
+}
+
+/* Ensure Nav Links are not showing hover color by default */
+.nav-links li a {
+  text-decoration: none; /* Remove underline */
+  color: #00c4ac; /* Set the default color */
+  font-weight: bold;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* Hover Effects */
+.nav-links li a:hover {
+  color: #054d43; /* Change link color on hover */
+}
+
+/* Join Now Button List Item */
+.nav-links li .join-now-btn {
+  padding: 10px 20px;
+  background-color: #d4fcf7; /* Button default color */
+  border-radius: 16px;
+  text-decoration: none; /* Remove underline */
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Join Now Button Hover */
+.nav-links li .join-now-btn:hover {
+  background-color: #054d43; /* Invert button color on hover */
+  color: white;
+}
+
+/* Pseudo-Class Handling */
+.nav-links a:link,
+.nav-links a:visited,
+.nav-links a:active {
+  text-decoration: none; /* Ensure no underline in any state */
+  border-bottom: none;
+  box-shadow: none;
+  color: #00c4ac; /* Set default color here */
+}
+
+/* Hide Navigation Links and Display Hamburger Icon on Small Screens */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #00c4ac;
+  margin: 5px 0;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Adjust based on navbar height */
+    right: 0;
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-toggle {
+    display: block; /* Display hamburger menu on small screens */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f8f8;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Mission */
+.big-text {
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+
+
+/* Hero Section */
+.hero {
+  flex-grow: 1; /* Takes up available space */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #00c4ac;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.hero-text h3 {
+  font-size: 1.5rem;
+  color: #054d43;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  margin-top: 3rem;
+  background-color: #00c4ac;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 16px;
+}
+
+/* CTA Button Hover */
+.cta-button:hover {
+  background-color: #054d43; /* Invert button color on hover */
+  color: white;
+  text-decoration: none;
+}
+
+
+.hero-image {
+  width: 40%;
+  object-fit: cover;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .hero {
+    display: block; /* Stack elements vertically */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .hero-text {
+    max-width: 100%; /* Full width for text */
+    margin-bottom: 20px; /* Add spacing between text and image */
+  }
+
+  .hero-text h3 {
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%; /* Full width for image */
+    max-width: 300px; /* Optional: Limit max width for the image */
+    margin: 0 auto; /* Center the image */
+    margin-top: 3rem;
+  }
+}
+
+/* Main Content */
+main {
+  padding: 30px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+/* Paragraph and Unordered List Styling */
+p,
+ul {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+/* Unordered List */
+ul {
+  list-style-type: disc; /* Ensure bullets are displayed */
+  padding-left: 20px; /* Indent bullets */
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* Ensure bullets are displayed and not removed by flex or other settings */
+ul li {
+  margin-bottom: 10px;
+  list-style-position: inside; /* Ensure bullets are inside the list item */
+  display: list-item; /* Explicitly set to list-item to show bullets */
+  padding: 0;
+  border: none;
+  color: #333;
+}
+
+/* Nested Unordered Lists */
+ul ul {
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+/* Ordered List with Alphabetical Letters */
+.alpha-list {
+  list-style-type: lower-alpha; /* Use alphabetical lower case letters */
+  margin-left: 20px; /* Indent list */
+  padding-left: 20px; /* Additional padding for clean look */
+}
+
+.alpha-list li {
+  margin-bottom: 10px; /* Space between list items */
+  color: #4a4a4a; /* Color for list text */
+  line-height: 1.6;
+}
+
+/* Ordered List with Numbers */
+.numbered-list {
+  list-style-type: decimal; /* Default numeric list */
+  margin-left: 20px; /* Indent the list */
+  padding-left: 20px; /* Additional padding to align numbers */
+}
+
+.numbered-list li {
+  margin-bottom: 10px; /* Space between list items */
+  color: #4a4a4a; /* Text color */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* Auto-adjust columns */
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+/* Avatar Styling */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Name and Testimonial Styling */
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 10px 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.quote-mark {
+  font-size: 1.5em;
+  color: #555;
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+}
+
+/* Star Rating */
+.testimonial-rating .star {
+  color: gold;
+  font-size: 1.2rem;
+  margin-right: 2px;
+}
+
+/* Footer */
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  background-color: #f8f8f8;
+}
+
+/* Social Links */
+.social-links a {
+  color: #00c4ac;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+/* Legal Links (Smaller Font, Grey Color, Center-Aligned) */
+.legal-container {
+  display: flex;
+  justify-content: center; /* Center-align the legal links */
+  align-items: center;
+  flex-wrap: wrap; /* Allows them to stack if needed on smaller screens */
+  margin-top: 10px;
+}
+
+.legal-links {
+  font-size: 0.8rem;
+  color: #888888;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legal-links a {
+  color: #888888;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #888888;
+  text-align: center;
+}

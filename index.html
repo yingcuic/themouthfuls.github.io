@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlock your voice. | The Mouthfuls</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="/">
+          <img src="images/logo.png" alt="The Mouthfuls Logo" class="logo"
+        /></a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <!-- <li><a href="mission.html">Our Mission</a></li> -->
+        <li><a href="stories.html">Member Stories</a></li>
+        <!-- <li><a href="signin.html">Sign In</a></li> -->
+        <li>
+          <a href="https://discord.gg/themouthfuls" class="join-now-btn"
+            >Join Now</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Unlock your voice. Embrace confidence. Unleash your potential.</h1>
+        <p>
+          Struggling to express yourself? Whether you’re an introvert, remote
+          worker, or non-native English speaker, clear communication can feel
+          out of reach—leading to missed opportunities and connections.
+        </p>
+        <p>
+          Our impromptu speaking and improv activities help you shake off
+          anxiety and sharpen your voice. Challenge yourself, think on your
+          feet, and engage in real-time conversations. Build confidence,
+          creativity, and charisma with every interaction.
+        </p>
+        <h3>A place to practice, share, learn, and grow.</h3>
+
+        <a href="https://discord.gg/themouthfuls" class="cta-button"
+          >Join Now</a
+        >
+      </div>
+      <img src="images/hero-image.png" alt="Hero Image" class="hero-image" />
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="social-links">
+        <a href="https://discord.gg/themouthfuls">Discord</a>
+        <a href="https://youtube.com/themouthfuls">YouTube</a>
+        <a href="https://patreon.com/themouthfuls">Patreon</a>
+        <a href="https://gofundme.com/f/themouthfuls">GoFundMe</a>
+      </div>
+      <!-- Legal Links and Copyright Section -->
+      <div class="legal-container">
+        <div class="copyright">&copy; 2024 The Mouthfuls.</div>
+        <div class="legal-links">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="rules.html">Community Guidelines</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

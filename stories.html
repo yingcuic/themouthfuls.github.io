@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlock your voice. | The Mouthfuls</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="/">
+          <img src="images/logo.png" alt="The Mouthfuls Logo" class="logo"
+        /></a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <!-- <li><a href="mission.html">Our Mission</a></li> -->
+        <!-- <li><a href="stories.html">Member Stories</a></li> -->
+        <!-- <li><a href="signin.html">Sign In</a></li> -->
+        <li>
+          <a href="https://discord.gg/themouthfuls" class="join-now-btn"
+            >Join Now</a
+          >
+        </li>
+      </ul>
+      </ul>
+    </nav>
+    <section class="testimonials">
+      <!-- Container where testimonials will be dynamically loaded -->
+      <div class="testimonial-container" id="testimonial-container"></div>
+    </section>
+
+    <!-- Load the JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="social-links">
+        <a href="https://discord.gg/themouthfuls">Discord</a>
+        <a href="https://youtube.com/themouthfuls">YouTube</a>
+        <a href="https://patreon.com/themouthfuls">Patreon</a>
+        <a href="https://gofundme.com/f/themouthfuls">GoFundMe</a>
+      </div>
+      <!-- Legal Links and Copyright Section -->
+      <div class="legal-container">
+        <div class="copyright">&copy; 2024 The Mouthfuls.</div>
+        <div class="legal-links">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="rules.html">Community Guidelines</a>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+
+  </body>
+</html>
