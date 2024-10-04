@@ -376,10 +376,24 @@ ul ul {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(400px, 1fr)
+    minmax(200px, 1fr)
   ); /* Auto-adjust columns */
   grid-gap: 20px;
   padding: 20px;
+}
+
+/* For larger screens, adjust min width to prevent skinny columns */
+@media (min-width: 768px) {
+  .testimonial-container {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* For very large screens, increase min width further */
+@media (min-width: 1200px) {
+  .testimonial-container {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
 }
 
 /* Testimonial Card */
