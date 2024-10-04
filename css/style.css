@@ -76,11 +76,14 @@ a:hover {
 
 /* Navbar */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: transparent; /* Transparent background */
   border-bottom: 2px solid #00c4ac; /* Bottom border */
 }
 
@@ -217,7 +220,6 @@ header h1 {
   color: #000;
 }
 
-
 /* Hero Section */
 .hero {
   flex-grow: 1; /* Takes up available space */
@@ -270,7 +272,6 @@ header h1 {
   color: white;
   text-decoration: none;
 }
-
 
 .hero-image {
   width: 40%;
