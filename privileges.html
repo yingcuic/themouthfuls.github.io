@@ -53,15 +53,20 @@
 
 <script>
     async function fetchGoogleSheet() {
-        const sheetId = "YOUR_SHEET_ID_HERE";
-        const apiKey = "YOUR_API_KEY_HERE";
-        const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Membership?key=${apiKey}`;
+        const sheetId = "1uKGx57OyfR_EnIvJV6WMOKpDsJH2jn-hSkPMz8iXFw0";
+        const apiKey = "AIzaSyDUUqgbuYq6Lf5MeWzzatJFuzxMC4PHEyQ";
+        const range = "Membership!A1:J34";  // Specify a range to ensure data is returned properly
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+
+        console.log("Fetching data from URL: ", url);
 
         try {
             const response = await fetch(url);
-            if (!response.ok) throw new Error("Network response was not ok");
+            console.log("Response status: ", response.status);
+            if (!response.ok) throw new Error("Network response was not ok: " + response.status);
             const data = await response.json();
-            if (!data.values) throw new Error("No data found or incorrect Sheet name");
+            console.log("Data fetched: ", data);
+            if (!data.values) throw new Error("No data found or incorrect Sheet name/range");
             renderData(data.values);
         } catch (error) {
             document.getElementById("sheetData").innerHTML = `<p>Error fetching data: ${error.message}</p>`;
