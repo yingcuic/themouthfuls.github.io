@@ -385,14 +385,14 @@ ul ul {
 /* For larger screens, adjust min width to prevent skinny columns */
 @media (min-width: 768px) {
   .testimonial-container {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 
 /* For very large screens, increase min width further */
 @media (min-width: 1200px) {
   .testimonial-container {
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
 }
 
@@ -502,4 +502,39 @@ footer {
   font-size: 0.8rem;
   color: #888888;
   text-align: center;
+}
+
+/* Styling for the iframe container */
+.iframe-container {
+  width: 90vw; /* Set to 90% of the viewport width for better centering */
+  height: 90vh; /* Set height to full viewport minus header height */
+  overflow: inherit; /* Prevent any overflow from the iframe container */
+  margin: 0; /* Remove any margin to make sure it fills the entire viewport */
+  padding: 0; /* Remove padding to avoid unnecessary spacing */
+  border: none; /* Remove any border */
+}
+
+/* Styling for the iframe itself */
+iframe {
+  width: 100vw; /* Make sure iframe takes up the full container width */
+  height: 100vh;
+  border: none; /* Remove any border around the iframe */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .iframe-container {
+    top: 80px; /* Adjust this value for a smaller header on mobile */
+    left: 50%; /* Center align horizontally */
+    transform: translateX(-50%); /* Ensure the container stays centered */
+    width: 95vw; /* Slightly reduce width for better usability on mobile */
+    height: calc(
+      100vh - 80px
+    ); /* Ensure full viewport height minus header height for smaller devices */
+  }
+
+  iframe {
+    width: 100%; /* Make sure iframe fills container on smaller screens */
+    height: 100%;
+  }
 }
