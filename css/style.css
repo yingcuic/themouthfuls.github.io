@@ -750,6 +750,7 @@ iframe {
   }
 }
 .differentiators {
+  padding: 20px 20px;
   background-color: #eafdfb;
   text-align: center;
 }
