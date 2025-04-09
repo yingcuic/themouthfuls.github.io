@@ -3,80 +3,780 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unlock your voice. | The Mouthfuls</title>
+    <title>The Mouthfuls – Speak Up, Not Just Post</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
-      <div class="logo-container">
-        <a href="/">
-          <img src="images/logo.png" alt="The Mouthfuls Logo" class="logo"
-        /></a>
+      <div class="container navbar-inner">
+        <div class="logo-container">
+          <a href="/">
+            <img src="images/logo.png" alt="The Mouthfuls Logo" class="logo" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li>
+            <a
+              href="https://discord.gg/ayUwPQZtDd"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="join-now-btn"
+              >Join Now</a
+            >
+          </li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span class="hamburger"></span>
+        </button>
       </div>
-      <button class="nav-toggle" aria-label="Toggle Navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-links">
-        <!-- <li><a href="mission.html">Our Mission</a></li> -->
-        <li><a href="stories.html">Member Stories</a></li>
-        <!-- <li><a href="signin.html">Sign In</a></li> -->
-        <li>
-          <a href="https://discord.gg/themouthfuls" class="join-now-btn"
-            >Join Now</a
-          >
-        </li>
-      </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Unlock your voice. Embrace confidence. Unleash your potential.</h1>
-        <p>
-          Struggling to express yourself? Whether you’re an introvert, remote
-          worker, or non-native English speaker, clear communication can feel
-          out of reach—leading to missed opportunities and connections.
-        </p>
-        <p>
-          Our impromptu speaking and improv activities help you shake off
-          anxiety, and challenge you to think on your feet.
-        </p>
-        <h3>A place to practice, share, learn, and grow.</h3>
-
-        <a href="https://discord.gg/themouthfuls" class="cta-button"
-          >Join Now</a
-        >
-      </div>
-      <img src="images/hero-image.png" alt="Hero Image" class="hero-image" />
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-      <div class="social-links">
-        <a href="https://discord.gg/themouthfuls">Discord</a>
-        <a href="https://youtube.com/themouthfuls">YouTube</a>
-        <a href="https://patreon.com/themouthfuls">Patreon</a>
-        <a href="https://gofundme.com/f/themouthfuls">GoFundMe</a>
-      </div>
-      <!-- Legal Links and Copyright Section -->
-      <div class="legal-container">
-        <div class="copyright">&copy; 2024 The Mouthfuls.</div>
-        <div class="legal-links">
-          <a href="terms.html">Terms of Service</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="rules.html">Community Guidelines</a>
+    <section id="about" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Helping the quiet online generation speak up.</h1>
+          <p class="hero-quote">
+            “I want to speak up without freezing, without overthinking, and
+            without performing. I want to be me—not someone else.”
+          </p>
+          <p class="hero-desc">
+            A voice-first space to practice real-time speaking, build
+            confidence, and express yourself—anonymously, with real people.
+          </p>
+          <a
+            href="https://discord.gg/ayUwPQZtDd"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-button"
+            >Join the Playground</a
+          >
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-image-3.png" alt="Hero Illustration" />
         </div>
       </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <h2 class="section-title">How It Works</h2>
+
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Join a friendly, host-led event</h3>
+          <p>
+            Step into a warm, low-pressure space—no camera, no expectations,
+            just real voices.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Get in the speaking queue</h3>
+          <p>
+            You’ll be added to the queue automatically, or raise your hand when
+            you’re ready. Everyone gets a turn.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Receive a prompt when it's your turn</h3>
+          <p>
+            When your name comes up, the host or bot gives you a prompt — fun,
+            deep, or surprising — to get you talking.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Share what’s on your mind</h3>
+          <p>
+            Take a couple of minutes to share your thoughts or story. No
+            interruption, no judgment — the floor is yours.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h3>Ask for feedback (optional)</h3>
+          <p>
+            Only when you want it. Get supportive input from the group or a
+            quick AI reflection.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">6</div>
+          <h3>Come back and practice</h3>
+          <p>
+            The more you speak, the more confident you get. Most members return
+            weekly or more — because it works.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">7</div>
+          <h3>Try hosting your own</h3>
+          <p>
+            Once you’ve built comfort, unlock the tools to lead your own room
+            and shape your own vibe.
+          </p>
+        </div>
+      </div>
+      <p class="system-note">
+        From smart queues to milestone progression, everything here was shaped
+        with intention—so even the quietest speakers feel seen, heard, and
+        supported. We didn’t adapt existing tools. We crafted our own.
+      </p>
+      <a
+        href="https://discord.gg/ayUwPQZtDd"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="section-cta"
+        >Try a Voice Room →</a
+      >
+    </section>
+
+    <section class="journey-section">
+      <h2 class="section-title">Your Journey</h2>
+      <p class="section-subtitle">
+        Confidence grows over time — and in good company. While everyone’s path
+        looks different, here’s what growth often feels like inside The
+        Mouthfuls:
+      </p>
+      <div class="journey-row">
+        <div class="journey-card stage-1">
+          <div class="journey-icon">🧭</div>
+          <h3>The Quiet Explorer</h3>
+          <p>
+            You listen. You observe. Then one day, you unmute — just for a
+            moment — and say something true.
+          </p>
+          <span class="journey-quote"
+            >“I didn't think I would speak. But I did.”</span
+          >
+        </div>
+
+        <div class="journey-card stage-2">
+          <div class="journey-icon">🎤</div>
+          <h3>The Emerging Contributor</h3>
+          <p>
+            You start speaking more often, building comfort, range, and
+            presence. Others listen, and your voice starts to carry weight.
+          </p>
+          <span class="journey-quote"
+            >“I'm finding my voice — and others are noticing.”</span
+          >
+        </div>
+
+        <div class="journey-card stage-3">
+          <div class="journey-icon">🌱</div>
+          <h3>The Trusted Host</h3>
+          <p>
+            You begin to hold space for others. You lead events that feel calm,
+            thoughtful, or electric — and people come back for you.
+          </p>
+          <span class="journey-quote"
+            >“I didn’t think I could host. Now I do it weekly.”</span
+          >
+        </div>
+
+        <div class="journey-card stage-4">
+          <div class="journey-icon">🌟</div>
+          <h3>The Community Shaper</h3>
+          <p>
+            You uplift others. You model emotional intelligence. Your presence
+            shapes the tone of a room.
+          </p>
+          <span class="journey-quote"
+            >“Now I'm helping others grow — not just myself.”</span
+          >
+        </div>
+      </div>
+      <a
+        href="https://discord.gg/ayUwPQZtDd"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="section-cta"
+        >Start Your Journey →</a
+      >
+    </section>
+
+    <section class="differentiators">
+      <div class="container">
+        <h2 class="section-title">
+          Built for the quiet online generation — because the loudest person
+          isn’t always the most ready to lead.
+        </h2>
+        <p class="section-intro">Here’s how we are different.</p>
+        <div class="diff-grid">
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="100">
+            <h3>
+              <span class="diff-icon">🎙️</span>Voice-first, camera-optional
+            </h3>
+            <p>
+              <strong
+                >You don’t have to show your face or reveal your identity.
+              </strong>
+              Our voice-first spaces create a low-pressure playground — a place
+              to explore your social presence, stretch beyond your comfort zone,
+              and grow confidence through trial, error, and play.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="200">
+            <h3>
+              <span class="diff-icon">🗣️</span>Speak to connect, not perform
+            </h3>
+            <p>
+              <strong
+                >We don’t count filler words, measure your pace against a
+                standard, or score your delivery.
+              </strong>
+              Instead, we help you express yourself in your naturally effective
+              way—so your voice feels like you and actually resonates.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="300">
+            <h3>
+              <span class="diff-icon">🤝</span>Grow into a voice others follow
+            </h3>
+            <p>
+              <strong
+                >Being articulate isn’t enough. We help you build the social
+                instincts and soft skills that shape how you're
+                perceived</strong
+              >
+              — emotional intelligence, credibility, diplomacy, and trust. Real
+              leadership isn’t merely about speaking well — it’s about being
+              someone others want to follow.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="400">
+            <h3><span class="diff-icon">🔓</span>Growth without gatekeeping</h3>
+            <p>
+              <strong>You don’t need permission to lead here. </strong>
+              As you participate and build experience, you naturally unlock the
+              ability to host your own speaking events — no applications, no
+              approvals. Just consistent practice that earns you access.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="500">
+            <h3><span class="diff-icon">🫶</span>Feedback when you’re ready</h3>
+            <p>
+              <strong>Feedback is optional — and only when it helps.</strong>
+              Many of our members are working through anxiety or self-doubt, and
+              premature critique can do more harm than good. Whether from peers
+              or AI, our feedback is designed to be thoughtful, consent-based,
+              and focused on what made you impactful — not what made you
+              imperfect.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="600">
+            <h3>
+              <span class="diff-icon">🌍</span>Global, flexible, always-on
+            </h3>
+            <p>
+              <strong
+                >No matter your time zone or schedule, there’s always something
+                to join</strong
+              >
+              — whether it’s a host-led event, a bot-powered solo room, a quiet
+              reading group, or a spontaneous voice chat with friends. You can
+              practice live, post asynchronously, or just hang out — all on your
+              terms, when it works for you.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="700">
+            <h3>
+              <span class="diff-icon">🌱</span>Built for individualized growth
+            </h3>
+            <p>
+              <strong>We don’t hand you a curriculum.</strong> You grow through
+              participation, learning from others, reflection, and consistent
+              effort — not by ticking boxes or following a fixed path. You’ll
+              find diverse role models, shared resources, and encouragement, but
+              you decide what resonates and work at your own pace.
+            </p>
+          </div>
+          <div class="diff-item" data-aos="fade-up" data-aos-delay="800">
+            <h3><span class="diff-icon">🫂</span>We go deeper than speaking</h3>
+            <p>
+              <strong
+                >Many barriers to social confidence aren’t merely about speaking
+                ability</strong
+              >
+              — they’re rooted in self-image, self-worth, and feeling unseen.
+              Here, you’ll find others who understand those struggles, reflect
+              your value back to you, and help you grow through empathy, shared
+              insight, and real emotional support.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a
+        href="https://discord.gg/ayUwPQZtDd"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="section-cta"
+        >Experience the Difference →</a
+      >
+    </section>
+
+    <section class="traction-trust">
+      <div class="container">
+        <h2 class="section-title">Trusted. Proven. Community-Led.</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <h3>10,000+</h3>
+            <p>Members speaking, listening, and growing together</p>
+          </div>
+          <div class="metric-card">
+            <h3>1,500+</h3>
+            <p>Speaking events hosted by real people, not AI</p>
+          </div>
+          <div class="metric-card">
+            <h3>#1</h3>
+            <p>Most active public speaking community on Discord</p>
+          </div>
+          <div class="metric-card">
+            <h3>344,000+</h3>
+            <p>Interactions with our custom-built Discord Apps</p>
+          </div>
+          <div class="metric-card">
+            <h3>5★ Rating</h3>
+            <p>On Disboard — our members are our best advocates</p>
+          </div>
+          <div class="metric-card">
+            <h3>7,000+</h3>
+            <p>Speaking prompts submitted and upvoted by members</p>
+          </div>
+          <div class="metric-card">
+            <h3>200+</h3>
+            <p>Communities follow our events and hosts</p>
+          </div>
+          <div class="metric-card">
+            <h3>Multiple</h3>
+            <p>Ways to get feedback — AI or human</p>
+          </div>
+        </div>
+        <p class="traction-note">
+          These aren’t just numbers. Each one reflects a real moment—someone
+          unmuting for the first time, someone leading their first event,
+          someone finally feeling heard. These moments are what matter. That’s
+          how confidence is built—for real.
+        </p>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+      <h2 class="section-title">Real Voices. Real Growth.</h2>
+      <p class="section-subtitle">
+        What our members are saying about speaking up, hosting, and finding
+        their voice.
+      </p>
+
+      <div class="testimonial-wrapper">
+        <div class="carousel-nav left" onclick="scrollTestimonials(-1)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            width="24"
+            height="24"
+          >
+            <polygon points="70,20 30,50 70,80" fill="white" />
+          </svg>
+        </div>
+        <div class="testimonial-carousel" id="testimonial-container">
+          <!-- Cards inserted here -->
+        </div>
+        <div class="carousel-nav right" onclick="scrollTestimonials(1)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            width="24"
+            height="24"
+          >
+            <polygon points="30,20 70,50 30,80" fill="white" />
+          </svg>
+        </div>
+      </div>
+      <a
+        href="https://discord.gg/ayUwPQZtDd"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="section-cta"
+        >See What It’s Like Inside →</a
+      >
+    </section>
+
+    <div id="pricing" class="pricing-section">
+      <div class="pricing-header">
+        <h2 class="section-title">Membership Tiers</h2>
+        <p class="section-subtitle">
+          Every voice belongs here. Whether you’re just getting started or want
+          to give back, each tier offers a way to grow, connect, or quietly
+          support what we’re building together.
+        </p>
+      </div>
+      <div class="pricing-grid">
+        <!-- FREE -->
+        <div class="pricing-card">
+          <div class="tier-icon">
+            <img src="images/tiers/free.png" alt="Free Icon" />
+          </div>
+          <div class="tier-header">
+            <h3>Free</h3>
+            <p class="price">$0</p>
+          </div>
+          <div class="tier-description">
+            <p>
+              Get started with everything you need to speak, grow, and connect.
+              Join voice rooms, receive member curated prompts, and unlock new
+              permissions—no subscription required.
+            </p>
+          </div>
+          <ul class="tier-perks toggle-content">
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Join any public speaking event led by a host or the community.
+            </li>
+
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Receive speaking prompts from a curated, member-voted library.
+            </li>
+
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Earn Quests to unlock streaming, camera-on, GIFs, and event
+              posting or hosting access.
+            </li>
+
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Access personal or group challenge, reading circles, and advice
+              channels.
+            </li>
+
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Join open feedback events and receive warm peer encouragement.
+            </li>
+
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Participate in community discussions, share resources, and meet
+              other growth-minded speakers.
+            </li>
+          </ul>
+
+          <button class="toggle-button" onclick="togglePerks(this)">
+            Show More
+          </button>
+        </div>
+
+        <!-- PLUTO -->
+        <div class="pricing-card">
+          <div class="tier-icon">
+            <img src="images/tiers/pluto.png" alt="Pluto Tier Icon" />
+          </div>
+          <div class="tier-header">
+            <h3>Pluto</h3>
+            <p class="price">$2.99<span>/month</span></p>
+          </div>
+          <div class="tier-description">
+            <p>
+              Get AI feedback and a speech recording, earn a shiny badge in the
+              queue, chats, and your profile, and rise on top of the member
+              list.
+            </p>
+          </div>
+          <ul class="tier-perks toggle-content">
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Receive a speech recording to review and improve, and AI-generated
+              feedback to highlight strengths, and identify areas for
+              improvement.
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Your support is a vote of confidence that inspires our team to
+              keep enhancing the platform and delivering a better experience for
+              all.
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              To thank you for your support, a shiny badge will appear beside
+              your name in the queue, chats, and on your profile, elevating your
+              status.
+            </li>
+          </ul>
+          <button class="toggle-button" onclick="togglePerks(this)">
+            Show More
+          </button>
+        </div>
+
+        <!-- MERCURY -->
+        <div class="pricing-card">
+          <div class="tier-icon">
+            <img src="images/tiers/mercury.png" alt="Mercury Tier Icon" />
+          </div>
+          <div class="tier-header">
+            <h3>Mercury</h3>
+            <p class="price">$5.49<span>/month</span></p>
+          </div>
+          <div class="tier-description">
+            <p>
+              Everything from Pluto+, plus powerful tools to sharpen your
+              speaking, hosting, and social skills, with exclusive access to
+              insider chats, private events, visual flairs, and priority access.
+            </p>
+          </div>
+          <ul class="tier-perks toggle-content">
+            <ul class="tier-perks toggle-content">
+              <!-- Instant Access / High-Impact -->
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Skip the wait and join full channels instantly with the “/let me
+                in” command.
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Ideal for busy professionals eager to unlock permissions like
+                camera-on, streaming, soundboard, GIFs in the main chat, and
+                more.
+              </li>
+
+              <!-- Practice + Prompt Tools -->
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Hone your skills in a bot-powered room designed for solo or
+                small-group practice with voice-announced prompts.
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Filter prompts by text or images and simplify complex ones with
+                the “Help Me Understand” button.
+              </li>
+
+              <!-- Personal Growth -->
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Request peer feedback on hosting, speaking, and social skills.
+              </li>
+
+              <!-- Community & Insider Perks -->
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Join insider discussions to exchange ideas and gain insights
+                from seasoned members.
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Enjoy early access to new features, special events, and
+                invite-only opportunities.
+              </li>
+
+              <!-- Customization + Identity -->
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Splash your profile with bold, vibrant colours that showcase
+                your style and make your presence pop.
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Get 5 role icons each month capturing the buzz of the moment.
+                Backstage members can also submit their own icons for
+                consideration!
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+                </svg>
+                Unlock 25 animated emojis to bring your messages to life, no
+                Nitro needed. With Nitro, access even more emojis and stickers
+                from other servers!
+              </li>
+            </ul>
+          </ul>
+
+          <button class="toggle-button" onclick="togglePerks(this)">
+            Show More
+          </button>
+        </div>
+
+        <!-- MARS+ -->
+        <div class="pricing-card mars-card">
+          <div class="tier-icon">
+            <img src="images/tiers/mars-beyond.png" alt="Mars+ Tier Icon" />
+          </div>
+
+          <div class="tier-header">
+            <h3>Mars & Beyond</h3>
+            <p class="price">$7.99+<span>/month</span></p>
+          </div>
+
+          <div class="tier-description">
+            <p>
+              Mars, Earth, Venus, and Neptune tiers are for those who give a
+              little extra love. These members aren’t looking for perks—they
+              simply care deeply about The Mouthfuls, want to see it thrive, and
+              are excited to see what we build next.
+            </p>
+          </div>
+
+          <ul class="tier-perks toggle-content">
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              To thank you for your support, a new badge will appear beside your name in the queue, chats, and on your profile, elevating your status.
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="6" fill="#00c4ac" />
+              </svg>
+              Fuel new features launching later this year — you’ll be among the
+              first to see what’s next.
+            </li>
+          </ul>
+
+          <button class="toggle-button" onclick="togglePerks(this)">
+            Show More
+          </button>
+        </div>
+      </div>
+      <div class="pricing-cta-container">
+        <a
+          href="https://discord.gg/ayUwPQZtDd"
+          class="cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Try for Free →</a
+        >
+        <div class="pricing-sub-links">
+          <a
+            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7Vs7rjYt5Jix8k_weBq3cYc3CLTjH2sEVauhJoawEt_9s_Juj2hLb_spz27R_Og/pubhtml"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Compare Tiers</a
+          >
+
+          <a
+            href="https://www.patreon.com/themouthfuls/gift"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Gift a Membership</a
+          >
+
+          <a
+            href="https://forms.gle/TaH4CPo9CCt7aGCw8"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Apply for a Scholarship</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <footer>
+      <div class="social-links">
+        <a
+          href="https://discord.gg/ayUwPQZtDd"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Discord</a
+        >
+        <a
+          href="https://youtube.com/themouthfuls"
+          target="_blank"
+          rel="noopener noreferrer"
+          >YouTube</a
+        >
+        <a
+          href="https://patreon.com/themouthfuls"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Patreon</a
+        >
+        <a
+          href="https://gofundme.com/f/themouthfuls"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GoFundMe</a
+        >
+      </div>
+      <div class="legal-container">
+        <div class="legal-links">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="rules.html">Guidelines</a>
+        </div>
+        <div class="copyright">&copy; 2024 The Mouthfuls</div>
+      </div>
     </footer>
+    <!-- Load JS -->
+    <script src="script.js"></script>
     <script>
       const navToggle = document.querySelector(".nav-toggle");
       const navLinks = document.querySelector(".nav-links");
-
-      navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      }
+    </script>
+    <script>
+      // Toggle perks in Mercury card
+      function togglePerks(button) {
+        const card = button.closest(".pricing-card");
+        const isExpanded = card.classList.toggle("expanded");
+        button.textContent = isExpanded ? "Show Less" : "Show More";
+      }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

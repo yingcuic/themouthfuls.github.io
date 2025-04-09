@@ -1,86 +1,65 @@
-const testimonialFiles = [
-  "testimonials/testimonial10.json",
-  "testimonials/testimonial9.json",
-  "testimonials/testimonial5.json",
-  "testimonials/testimonial8.json",
-  "testimonials/testimonial1.json",
-  "testimonials/testimonial2.json",
-  "testimonials/testimonial3.json",
-  "testimonials/testimonial4.json",
-  "testimonials/testimonial6.json",
-  "testimonials/testimonial7.json",
-];
-
-// Function to load and display testimonials dynamically
 async function loadTestimonials() {
-  try {
-    const testimonialContainer = document.getElementById(
-      "testimonial-container"
-    );
+  const container = document.getElementById("testimonial-container");
 
-    // Clear any existing testimonials
-    testimonialContainer.innerHTML = "";
+  for (let i = 1; i <= 100; i++) {
+    try {
+      const response = await fetch(`testimonials/testimonial${i}.json`);
+      if (!response.ok) throw new Error(`Fetch failed: ${response.status}`);
 
-    // Loop through each testimonial file
-    for (const file of testimonialFiles) {
-      const response = await fetch(file); // Fetch the JSON file
-      if (!response.ok) throw new Error(`Failed to load ${file}`);
+      const data = await response.json();
+      console.log(`Loaded testimonial ${i}:`, data);
 
-      const testimonial = await response.json(); // Get the JSON object
+      const card = document.createElement("div");
+      card.className = "testimonial-card";
 
-      // Create testimonial card elements
-      const testimonialCard = document.createElement("div");
-      testimonialCard.classList.add("testimonial-card");
-
-      // Create the avatar element
       const avatar = document.createElement("img");
-      avatar.classList.add("avatar");
-      avatar.src = testimonial.avatar || "images/avatars/default.jpg"; // Default avatar if not provided
-      avatar.alt = `Avatar of ${testimonial.name}`;
+      avatar.src = `images/avatars/avatar${i}.png`;
+      avatar.alt = `${data.name}'s Avatar`;
+      avatar.className = "testimonial-avatar";
 
-      // Create the name element
-      const name = document.createElement("h3");
-      name.textContent = testimonial.name; // This is accessing .name from the JSON file
+      const name = document.createElement("div");
+      name.className = "testimonial-name";
+      name.textContent = data.name;
 
-      // Create the quote element (added)
-      const quote = document.createElement("p");
-      quote.classList.add("testimonial-quote");
-      quote.innerHTML = `<span class="quote-mark">“</span><strong>${testimonial.quote}</strong><span class="quote-mark">”</span>`;
+      const quote = document.createElement("div");
+      quote.className = "testimonial-quote";
+      quote.textContent = data.testimonial.length > 180
+        ? data.testimonial.slice(0, 180) + "..."
+        : data.testimonial;
 
-      // Create the testimonial text element
-      const text = document.createElement("p");
-      text.textContent = testimonial.testimonial; // This is accessing .text from the JSON file
+      const readMore = document.createElement("span");
+      readMore.className = "read-more";
+      readMore.textContent = "Read More";
 
-      // Create the rating element
-      const rating = document.createElement("div");
-      rating.classList.add("testimonial-rating");
+      let expanded = false;
+      readMore.onclick = () => {
+        expanded = !expanded;
+        quote.textContent = expanded
+          ? data.testimonial
+          : data.testimonial.slice(0, 180) + "...";
+        readMore.textContent = expanded ? "Show Less" : "Read More";
+      };
 
-      // Add star rating
-      for (let i = 0; i < 5; i++) {
-        const star = document.createElement("span");
-        star.classList.add("star");
-        star.textContent = i < testimonial.rating ? "★" : "☆"; // Full star or empty star based on JSON rating
-        rating.appendChild(star);
-      }
+      card.appendChild(avatar);
+      card.appendChild(name);
+      card.appendChild(quote);
+      card.appendChild(readMore);
 
-      // Append everything to the testimonial card
-      testimonialCard.appendChild(avatar);
-      testimonialCard.appendChild(name);
-      testimonialCard.appendChild(quote);
-      testimonialCard.appendChild(text);
-      testimonialCard.appendChild(rating);
+      container.appendChild(card);
 
-      // Append the testimonial card to the container
-      testimonialContainer.appendChild(testimonialCard);
+    } catch (e) {
+      console.warn(`Error loading testimonial${i}.json`, e);
     }
-  } catch (error) {
-    console.error("Error loading testimonials:", error);
-    const testimonialContainer = document.getElementById(
-      "testimonial-container"
-    );
-    testimonialContainer.innerHTML = `<p>Error loading testimonials. Please try again later.</p>`;
   }
 }
 
-// Call the function to load testimonials when the page is loaded
-document.addEventListener("DOMContentLoaded", loadTestimonials);
+loadTestimonials();
+
+function scrollTestimonials(direction) {
+  const container = document.getElementById("testimonial-container");
+  const scrollAmount = 340; // adjust as needed
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth"
+  });
+}
