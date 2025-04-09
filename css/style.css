@@ -772,6 +772,7 @@ iframe {
   gap: 32px;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .diff-item {
@@ -824,6 +825,20 @@ iframe {
   font-weight: 600;
   font-size: 1.05rem;
   line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .diff-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* ⬅ centers children horizontally */
+  }
+
+  .diff-item {
+    width: 90%;             /* prevents full width stretching */
+    max-width: 500px;       /* optional: to limit overly wide cards */
+    margin: 0 auto 1.5rem;  /* vertical spacing between items */
+  }
 }
 
 .traction-trust {
