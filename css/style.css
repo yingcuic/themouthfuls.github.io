@@ -779,7 +779,6 @@ iframe {
   background-color: #f8f8f8;
   border-radius: 12px;
   padding: 20px 20px 20px 20px;
-  text-align: left;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-family: "Segoe UI", system-ui, sans-serif;
