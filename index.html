@@ -9,12 +9,8 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/aos@next/dist/aos.css"
-      media="print"
-      onload="this.media='all'"
+      media="screen and (min-width: 769px)"
     />
-    <noscript>
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    </noscript>
   </head>
   <body>
     <nav class="navbar">
@@ -799,6 +795,13 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      AOS.init({
+        disable: function () {
+          return window.innerWidth < 769;
+        },
+      });
     </script>
   </body>
 </html>
