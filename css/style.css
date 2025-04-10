@@ -46,14 +46,14 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 600;
-  color: #1a1a1a; /* Dark grey for headings */
+  font-weight: bold;
+  color: #054d43; /* Dark grey for headings */
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 h1 {
-  font-size: 2.5rem; /* Main title */
+  font-size: 3rem; /* Main title */
 }
 
 h2 {
@@ -61,10 +61,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem; /* Sub-section titles */
+  font-size: 1.25rem;
 }
 
 p {
+  font-size: 0.9rem;
   margin-bottom: 20px;
   color: #4a4a4a; /* Slightly lighter grey for body text */
 }
@@ -268,7 +269,7 @@ header h1 {
 
 .hero-text {
   flex: 1;
-  max-width: 550px;
+  max-width: 580px;
   padding-right: 2rem;
 }
 
@@ -276,8 +277,7 @@ header h1 {
   font-size: 3rem;
   font-weight: bolder;
   color: #00bfa6;
-  line-height: 1.2;
-  max-width: 580px;
+  line-height: 1.25;
   margin-bottom: 1.5rem;
 }
 
@@ -364,12 +364,6 @@ main {
   padding: 30px;
 }
 
-h2 {
-  font-size: 1.8rem;
-  color: #1a1a1a;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
 /* Paragraph and Unordered List Styling */
 p,
 ul {
@@ -568,7 +562,7 @@ iframe {
   justify-content: space-between;
   background-color: #f8f8f8;
   border-left: 4px solid #00c4ac;
-  padding: 16px 16px 40px;
+  padding: 20px;
   border-radius: 12px;
   text-align: left;
   height: 85%;
@@ -593,16 +587,11 @@ iframe {
 }
 
 .step h3 {
-  text-align: left;
-  font-size: 1.1rem;
-  margin-bottom: 6px;
-  color: #1a1a1a;
   padding-right: 4rem;
 }
 
 .step p {
   text-align: top;
-  font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
   padding-right: 4rem;
@@ -612,7 +601,7 @@ iframe {
 /* Responsive */
 @media (max-width: 768px) {
   .step {
-    padding: 20px;
+    padding: 12px;
   }
 
   .step-number {
@@ -657,29 +646,25 @@ iframe {
   text-align: left;
   background-color: #f5fafa;
   border-top: 4px solid #00c4ac;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.journey-card.stage-1 {
+.journey-card:nth-child(1) {
   background-color: #f5fafa;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.journey-card.stage-2 {
+.journey-card:nth-child(2) {
   background-color: #eef7f7;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.journey-card.stage-3 {
+.journey-card:nth-child(3) {
   background-color: #e7f1f1;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
 }
 
-.journey-card.stage-4 {
+.journey-card:nth-child(4) {
   background-color: #e0ebeb;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
 }
 
 .journey-card:hover {
@@ -703,10 +688,6 @@ iframe {
 }
 
 .journey-card h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #1a1a1a;
-  margin-bottom: 12px;
   text-align: center;
 }
 
@@ -718,7 +699,7 @@ iframe {
 }
 
 .journey-quote {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
   color: #777;
   display: block;
@@ -727,7 +708,7 @@ iframe {
 
 @media (max-width: 768px) {
   .journey-card h3 {
-    font-size: 1.1rem;
+    text-align: center;
   }
   .journey-icon {
     font-size: 1.6rem;
@@ -742,11 +723,10 @@ iframe {
 
 .diff-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   max-width: 1200px;
   margin: auto;
-  padding: 16px;
 }
 
 .diff-item {
@@ -755,7 +735,6 @@ iframe {
   padding: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: "Segoe UI", system-ui, sans-serif;
   text-align: left;
 }
 
@@ -770,9 +749,6 @@ iframe {
   gap: 10px;
   margin-bottom: 10px;
   margin: 0;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #054d43;
 }
 
 .diff-item h3 .diff-icon {
@@ -781,30 +757,20 @@ iframe {
   margin-right: 8px;
   display: block;
   text-align: left;
-  font-size: 3.5rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
 .diff-item p {
   color: #444;
-  font-size: 1rem;
   line-height: 1.65;
   margin-top: 12px;
 }
 
 .diff-item p strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #1a1a1a;
-  font-weight: 600;
-  font-size: 1.05rem;
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
-  .diff-grid {
-    padding: 16px;
-  }
+  color: #444;
+  font-weight: 500;
+  line-height: 1.65;
 }
 
 .traction-trust {
@@ -815,8 +781,8 @@ iframe {
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -824,13 +790,17 @@ iframe {
 .metric-card {
   background-color: #f8f8f8;
   border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 4px solid #00c4ac;
   transition: transform 0.2s ease;
+  position: relative;
+  text-align: center;
 }
 
 .metric-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .metric-card h3 {
@@ -857,32 +827,6 @@ iframe {
   padding: 0 20px;
 }
 
-@media (max-width: 400px) {
-  .metrics-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 0 12px;
-    margin: 0 auto;
-  }
-
-  .metric-card {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .metric-card h3 {
-    font-size: 1.6rem;
-  }
-
-  .metric-card p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-}
-
 .testimonials-section {
   padding: 80px 20px;
   background-color: #eafdfb;
@@ -900,7 +844,7 @@ iframe {
 
 .testimonial-carousel {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 40px 0;
@@ -946,7 +890,7 @@ iframe {
 .read-more {
   color: #00c4ac;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 0.9rem;
 }
 
@@ -1032,33 +976,27 @@ iframe {
   text-align: center;
 }
 
-.pricing-header {
-  max-width: 750px;
-  margin: 0 auto 60px;
-  text-align: center;
-}
-
 .pricing-grid {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px;
-  align-items: stretch;
 }
 
 .pricing-card {
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  padding: 16px;
-  max-width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
   text-align: left;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
+  position: relative;
+  transition: transform 0.2s ease;
+  border-top: 4px solid #00c4ac;
 }
 
 .pricing-card:nth-child(1) {
@@ -1076,7 +1014,7 @@ iframe {
 
 .pricing-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .tier-icon img {
@@ -1088,7 +1026,7 @@ iframe {
 }
 
 .tier-header h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 0.25rem;
   color: #054d43;
   text-align: center;
@@ -1194,7 +1132,8 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 48px;
+  gap: 12px;
+  margin-top: 20px;
   font-size: 0.95rem;
   color: #666;
   opacity: 0.85;
@@ -1210,41 +1149,10 @@ iframe {
   color: #00b3a6;
 }
 
-/* Responsive tweaks */
-@media (max-width: 400px) {
-  .pricing-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 12px;
-    justify-content: center;
-    gap: 24px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .pricing-card {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-
-  .pricing-cta-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pricing-sub-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .cta-btn {
-    width: 90%;
-    max-width: 350px;
-  }
+.pricing-sub-links .cta-button.secondary {
+  min-width: 200px;
+  flex: 1 1 200px;
+  text-align: center;
 }
 
 .section-divider {
@@ -1259,4 +1167,73 @@ iframe {
     rgba(0, 196, 172, 0)
   );
   opacity: 0.4;
+}
+
+/* Shared CTA Button Base */
+.cta-button,
+.section-cta,
+.hero-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  background: linear-gradient(to right, #00c4ac, #00b3a6);
+  box-shadow: 0 4px 14px rgba(0, 191, 166, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  margin: 30px auto 0;
+}
+
+.cta-button:hover,
+.section-cta:hover,
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 191, 166, 0.4);
+}
+
+/* Optional: Secondary CTA for softer prompts */
+.cta-button.secondary {
+  background: none;
+  color: #00bfa6;
+  border: 2px solid #00bfa6;
+  box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+  background-color: #eafdfb;
+  transform: none;
+}
+
+/* Improve vertical spacing for CTAs */
+.section-cta {
+  margin-top: 40px;
+}
+
+.pricing-cta-container {
+  padding-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cta-button,
+  .section-cta,
+  .hero-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .pricing-cta-container {
+    padding: 20px 0;
+  }
+
+  .pricing-card {
+    height: 85%;
+    width: 90%;
+  }
 }
