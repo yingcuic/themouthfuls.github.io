@@ -1029,7 +1029,6 @@ iframe {
 }
 
 .pricing-card {
-  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   padding: 16px;
@@ -1054,7 +1053,6 @@ iframe {
 .pricing-card:nth-child(4) {
   background-color: #fef2f2; /* soft rose */
 }
-
 
 .pricing-card:hover {
   transform: translateY(-4px);
@@ -1128,7 +1126,7 @@ iframe {
   padding: 24px;
   width: 90%;
   justify-content: center;
-  margin:0 auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -1197,14 +1195,16 @@ iframe {
   .pricing-grid {
     display: flex;
     flex-direction: column;
-    align-items: center; /* ✅ Center cards horizontally */
-    padding: 0 16px; /* Balanced side padding */
+    align-items: center;
+    padding: 0 20px;
+    justify-content: center;
     gap: 24px;
+    margin: 0 auto;
   }
 
   .pricing-card {
-    width: 100%; /* ✅ Stretch card width to fill container */
-    max-width: 360px; /* Optional: limit width to look clean */
+    width: 100%;
+    max-width: 300px; 
     margin: 0 auto;
   }
 
