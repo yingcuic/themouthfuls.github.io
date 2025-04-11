@@ -249,7 +249,7 @@ header h1 {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #d4fcf7, #ffffff);
+  background: linear-gradient(to bottom, #d4fcf7, #ffffff);
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
@@ -260,7 +260,7 @@ header h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
@@ -271,6 +271,7 @@ header h1 {
   flex: 1;
   max-width: 580px;
   padding-right: 2rem;
+  align-items: flex-start;
 }
 
 .hero-text h1 {
@@ -281,8 +282,8 @@ header h1 {
   margin-bottom: 1.5rem;
 }
 
-.hero-text .cta-lead-text {
-  text-align: left;
+.hero-text .cta-pair {
+  align-items: flex-start;
 }
 
 .hero-quote {
@@ -334,11 +335,18 @@ header h1 {
 
   .hero-grid {
     flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
   }
 
   .hero-text {
     max-width: 100%;
     padding: 0;
+    align-items: center;
+  }
+
+  .hero-text .cta-pair {
+    align-items: center;
   }
 
   .hero-image {
@@ -645,7 +653,9 @@ iframe {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 .journey-card {
@@ -714,15 +724,6 @@ iframe {
   margin-top: 8px;
 }
 
-@media (max-width: 768px) {
-  .journey-card h3 {
-    text-align: center;
-  }
-  .journey-icon {
-    font-size: 1.6rem;
-  }
-}
-
 .differentiators {
   padding: 80px 20px;
   background-color: #eafdfb;
@@ -735,13 +736,14 @@ iframe {
   gap: 24px;
   max-width: 1200px;
   margin: auto;
+  padding-bottom: 40px;
 }
 
 .diff-item {
   background-color: #f8f8f8;
   border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: left;
 }
@@ -958,26 +960,6 @@ iframe {
   }
 }
 
-.section-cta {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1rem;
-  background: linear-gradient(to right, #00c4ac, #00b3a6);
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 191, 166, 0.25);
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.section-cta:hover {
-  background: linear-gradient(to right, #00b3a6, #00978a);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 191, 166, 0.35);
-}
-
 .pricing-section {
   background-color: #f8f8f8;
   padding: 80px 20px;
@@ -990,6 +972,7 @@ iframe {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px 0;
 }
 
 .pricing-card {
@@ -1124,7 +1107,6 @@ iframe {
   font-size: 1.1rem;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 191, 166, 0.3);
-  margin-bottom: 20px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
 }
@@ -1135,12 +1117,12 @@ iframe {
 }
 
 .pricing-sub-links {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
 }
 
 .pricing-sub-links a {
@@ -1188,7 +1170,7 @@ iframe {
 .section-cta,
 .hero-button {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -1198,7 +1180,6 @@ iframe {
   box-shadow: 0 4px 14px rgba(0, 191, 166, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
-  margin: 30px auto 0;
 }
 
 .cta-button:hover,
@@ -1221,23 +1202,30 @@ iframe {
   color: #009f90;
 }
 
-/* Improve vertical spacing for CTAs */
-.section-cta {
-  margin-top: 40px;
-}
-
 .pricing-cta-container {
   padding-top: 40px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.cta-lead-text {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #444;
-  margin-bottom: 12px;
+.cta-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-lead-text {
+  font-size: 1rem;
+  max-width: 300px;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
