@@ -96,6 +96,7 @@ a:hover {
   box-sizing: border-box;
   box-shadow: none;
   margin: 0 auto;
+  padding: 6px auto;
 }
 
 .navbar-inner {
@@ -108,7 +109,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  border-radius: 0 0 8px 8px; /* Optional for polish */
+  border-radius: 0 0 8px 8px;
 }
 
 /* Logo */
@@ -120,7 +121,7 @@ a:hover {
 .logo {
   width: 48px; /* Adjust size */
   height: 48px;
-  padding-left: 6px;
+  padding-left: 16px;
   padding-top: 6px;
 }
 
@@ -128,7 +129,9 @@ a:hover {
 .nav-links {
   display: flex;
   list-style: none;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .nav-links a {
@@ -137,7 +140,8 @@ a:hover {
 
 /* Styling List Items */
 .nav-links li {
-  margin-left: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
   text-decoration: none;
   border-bottom: none; /* Remove any potential borders */
   box-shadow: none; /* Remove any shadow */
@@ -161,7 +165,7 @@ a:hover {
 
 /* Join Now Button List Item */
 .nav-links li .join-now-btn {
-  padding: 6px 16px;
+  padding: 12px 20px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -202,27 +206,36 @@ a:hover {
     max-width: 100%;
   }
   .nav-links {
+    position: absolute;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px; /* Adjust based on navbar height */
-    right: 0;
+    left: 50%;
+    top: 60px; /* Adjust based on navbar height */
     background-color: #ffffff;
-    width: 200px;
-    padding: 20px;
+    width: 240px;
+    padding: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links li {
-    margin: 10px 0;
+    align-items: center;
+    transform: translateX(-20%);
   }
 
   .nav-toggle {
-    display: block; /* Display hamburger menu on small screens */
+    display: block;
   }
 
   .nav-links.active {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links li .join-now-btn {
+    display: inline-block;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
   }
 }
 
@@ -1170,7 +1183,7 @@ iframe {
 .section-cta,
 .hero-button {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 20px;
   font-size: 1rem;
   font-weight: 600;
   color: white;
