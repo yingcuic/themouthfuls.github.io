@@ -281,6 +281,10 @@ header h1 {
   margin-bottom: 1.5rem;
 }
 
+.hero-text .cta-lead-text {
+  text-align: left;
+}
+
 .hero-quote {
   font-size: 1.1rem;
   font-style: italic;
@@ -1219,6 +1223,14 @@ iframe {
 .pricing-cta-container {
   padding-top: 40px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.cta-lead-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 12px;
   text-align: center;
 }
 
